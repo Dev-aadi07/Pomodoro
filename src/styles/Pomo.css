@@ -1,0 +1,160 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Baloo 2', 'Comfortaa', 'Poppins', 'Quicksand', sans-serif;
+}
+.pomo-container {
+  border-radius: 20px;
+  height: 56vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.pomo-duration {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+.pomo-clock-action {
+  width: 165px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.pomo-counter {
+  color: white;
+  font-size: 120px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+button {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 44px;
+  border-radius: 50px;
+  background-color: transparent;
+  color: #fff;
+  border: 3px solid #fff;
+  transition: 0.5s ease-in-out;
+}
+button.active,
+button:hover {
+  color: #000;
+  background-color: #fff;
+}
+.reset {
+  cursor: pointer;
+  font-size: 32px;
+  border-radius: 50px;
+}
+@keyframes spinOnce {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.reset.spin {
+  animation: spinOnce 0.5s ease-in-out;
+}
+
+
+
+
+
+/* Tablet view: below 1024px */
+@media (max-width: 1024px) {
+  .pomo-container {
+    width: 60vw;
+  }
+
+  .pomo-counter {
+    font-size: 90px;
+  }
+
+  .break {
+    width: 110px;
+    height: 42px;
+    font-size: 15px;
+  }
+}
+
+/* Mobile view: below 768px */
+@media (max-width: 768px) {
+  .pomo-container {
+    width: 90vw;
+    height: auto;
+    gap: 15px;
+    padding: 20px 10px;
+    justify-content: flex-start;
+  }
+
+  .pomo-duration {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    height: 42px;
+    font-size: 15px;
+  }
+  
+  .pomo-counter {
+    font-size: 64px;
+    margin: 10px 0;
+  }
+
+  .pomo-clock-action {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .pomo-clock-action .break.start {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .reset {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* Small phones: below 480px */
+@media (max-width: 480px) {
+  .pomo-container {
+    padding: 10px;
+  }
+
+  .pomo-counter {
+    font-size: 48px;
+  }
+
+  .break {
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .pomo-clock-action {
+    gap: 8px;
+  }
+}

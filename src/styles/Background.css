@@ -1,0 +1,43 @@
+.floating-earphone {
+  position: fixed;
+  top: 0px;
+  right: 20px;
+  width: 1200px;
+  height: auto;
+  z-index: -1;
+  animation: slideFadeIn 0.9s ease-out forwards;
+  pointer-events: none; /* prevents interaction */
+}
+
+/* Smaller on tablets */
+@media (max-width: 1024px) {
+  .floating-earphone {
+    width: 900px;
+  }
+}
+
+/* Smaller on phones */
+@media (max-width: 768px) {
+  .floating-earphone {
+    width: 800px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .floating-earphone {
+    right: 0px;
+    width: 600px;
+  }
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
