@@ -5,10 +5,11 @@ html, body {
   height: 100%;
 }
 body {
+  /* background-color: #2b2d42; */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Baloo 2', 'Comfortaa', 'Poppins', 'Quicksand', sans-serif;
+  font-family: 'Comfortaa',sans-serif;
 }
 .pomo-container {
   border-radius: 20px;

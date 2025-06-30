@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from 'react';
-import '../../styles/Pomo.css';
+import '../../styles/Timer.css';
 import Background from './Background';
+import resetIcon from '../../assets/reset.webp';
+import beep from '../../assets/beep.mp3'
+const beepAudio = new Audio(beep);
 
 function Timer() {
   const [isRunning, setIsRunning] = useState(false);
@@ -10,7 +13,7 @@ function Timer() {
 
 
   const durations = useMemo(
-    () => ({ pomo: 25 * 60, short: 5 * 60, long: 15 * 60 }),
+    () => ({ pomo: 25 * 60, short: 5* 60, long: 15 * 60 }),
     []
   );
 
@@ -31,7 +34,11 @@ function Timer() {
     let timer;
     if (isRunning && secLeft > 0) {
       timer = setInterval(() => {
-        setSecLeft((prev) => prev - 1);
+        setSecLeft((prev) => {
+          if(prev<=1) {
+            beepAudio.play();
+          }
+          return prev - 1});
       }, 1000);
     }
     return () => clearInterval(timer);
@@ -82,8 +89,8 @@ function Timer() {
             width="30"
             height="30"
             className={`reset ${resetSpin ? 'spin' : ''}`}
-            src="https://img.icons8.com/ios-filled/50/FFFFFF/recurring-appointment.png"
-            alt="reset-icon"
+            src={resetIcon}
+            alt="reset"
           />
         </div>
       </div>

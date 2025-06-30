@@ -1,4 +1,4 @@
-import earPhone from '../../assets/earphone.png';
+import earPhone from '../../assets/earphone.webp';
 import '../../styles/Background.css';
 
 function Background() {
