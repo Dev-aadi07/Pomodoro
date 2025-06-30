@@ -19,7 +19,7 @@
 
 ## 🚀 Live Demo
 
-[🔗 View the App Here]([https://your-live-link.netlify.app](https://pomodoro-nu-rosy.vercel.app/))
+[🔗 View the App Here]((https://pomodoro-nu-rosy.vercel.app/))
 
 ---
 
