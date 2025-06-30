@@ -52,12 +52,13 @@ button {
   background-color: transparent;
   color: #fff;
   border: 3px solid #fff;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-out;
 }
 button.active,
 button:hover {
   color: #000;
   background-color: #fff;
+  transition: 0.5s ease-in-out;
 }
 .reset {
   cursor: pointer;
@@ -79,83 +80,81 @@ button:hover {
 /* Tablet view: below 1024px */
 @media (max-width: 1024px) {
   .pomo-container {
-    width: 60vw;
+    width: 75vw;
   }
 
   .pomo-counter {
     font-size: 90px;
   }
 
-  .break {
+  button {
     width: 110px;
     height: 42px;
     font-size: 15px;
+  }
+
+  .pomo-clock-action {
+    width: 180px;
+    gap: 16px;
   }
 }
 
 /* Mobile view: below 768px */
 @media (max-width: 768px) {
   .pomo-container {
-    width: 90vw;
+    width: 95vw;
     height: auto;
-    gap: 15px;
     padding: 20px 10px;
-    justify-content: flex-start;
   }
 
   .pomo-duration {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
   }
 
   button {
-    width: 100%;
-    max-width: 300px;
-    height: 42px;
-    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
   }
-  
+
   .pomo-counter {
     font-size: 64px;
     margin: 10px 0;
   }
 
   .pomo-clock-action {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .pomo-clock-action .break.start {
-    width: 100%;
-    max-width: 300px;
+    width: auto;
+    gap: 16px;
   }
 
   .reset {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 }
 
 /* Small phones: below 480px */
 @media (max-width: 480px) {
-  .pomo-container {
-    padding: 10px;
-  }
-
   .pomo-counter {
     font-size: 48px;
   }
 
-  .break {
-    font-size: 14px;
-    height: 38px;
+  .pomo-duration {
+    gap: 8px;
+  }
+
+  button {
+    font-size: 13px;
+    width: 90px;
+    height: 36px;
   }
 
   .pomo-clock-action {
-    gap: 8px;
+    gap: 12px;
   }
 }
+

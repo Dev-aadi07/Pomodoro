@@ -51,7 +51,7 @@ function Timer() {
 
   return (
     <>
-      <Background />
+      <Background key={mode}/>
       <div className="pomo-container">
         <div className="pomo-duration">
           <button
