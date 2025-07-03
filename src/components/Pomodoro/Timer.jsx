@@ -3,6 +3,7 @@ import '../../styles/Timer.css';
 import Background from './Background';
 import resetIcon from '../../assets/reset.webp';
 import beep from '../../assets/beep.mp3'
+import Music from './Music';
 const beepAudio = new Audio(beep);
 
 function Timer() {
@@ -94,6 +95,7 @@ function Timer() {
           />
         </div>
       </div>
+      <Music />
     </>
   );
 }
